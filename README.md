@@ -87,6 +87,11 @@ $opciones = array(
 );
 ```
 
+El primer campo corresponde al nombre de la variable interna, el cual deberia ser simple e irrepetible.
+
+El segundo campo corresponde a la etiqueta pública que se mostrará en el portal.
+
+El tercer campo es el contenido de la variable que se usará para el cálculo. Debe estar siempre limpia (o sea, cero).
 
 
 
