@@ -45,6 +45,11 @@ SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará au
 
 <img src="https://user-images.githubusercontent.com/109446387/180046713-6aa3b1c3-9f6c-4501-a665-1283fe14433e.png" height="100">
 
+----
+
+Configuración del archivo "definiciones.php"
+
+lorem
 
 
 
