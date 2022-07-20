@@ -65,7 +65,7 @@ SEGUNDOS_RECALCULO: Estos son los segundos (periodo) en el que se efectuará el 
 
 TOTAL_CLAVES: Aqui especificamos el total de claves de autorización (clave mesa) que deseamos generar. Sólo en el caso de requerir seguridad estricta, habria que generar una clave por mesa (o sea, debiera coincidir con MESA_ULTIMA). Este archivo se generará una sóla vez (si aún no se ha creado las carpeta SEGURIDAD).
 
-CARACTERES_CLAVE: Aqui especificamos cuántos carecteres (letras o números) tendran las claves. Yo creo que con 4 digitos sería suficiente, no es necesario complicarse.
+CARACTERES_CLAVE: Aqui especificamos cuántos carecteres (letras o números) tendran las claves que generaremos. Yo creo que con 4 digitos sería suficiente, no es necesario complicarse.
 
 CLAVE_ESTRICTA: Si este valor es 0, cualquier clave de la lista servirá para cualquier mesa. Si este valor es 1, la primera clave de la lista funciona para la mesa 1, la segunda clave de la lista funciona para la mesa 2, y asi sucesivamente. NOTA: si borras todos los archivos de la carpeta SEGURIDAD, no será necesario especificar ninguna clave (clave mesa) en el portal (o sea, cualquier persona puede modificar el conteo global). Este último modo sería adecuado para un ensayo preliminar (para que los usuarios se familiaricen con el portal).
 
