@@ -1,5 +1,5 @@
 # CONTADOR-DE-VOTOS
-Portal WEB de código abierto para la recepción de recuento de votos electorales
+### Portal WEB de código abierto para la recepción de recuento de votos electorales
 
 <img src="https://user-images.githubusercontent.com/109446387/180042518-1bca89ad-6351-41b2-865f-d886b0f81614.jpg" height="280">
 <img src="https://user-images.githubusercontent.com/109446387/180093941-a6bd7a3c-7bfe-4261-9e13-ee7917b3c8c8.jpg" height="280">
@@ -14,23 +14,23 @@ Al contrario de lo que se piensa sobre este tipo de herramientas, no se necesita
 
 ----
 
-ARCHIVOS INVOLUCRADOS
+### ARCHIVOS INVOLUCRADOS
 
 Las funciones necesarias para el portal se reducen a 3 archivos de código PHP publicados acá: "index.php", "funciones.php" y "evento.php". Al ser un programa muy breve, resultará fácil para cualquier programador revisarlo y verificar la presencia de errores o potenciales trampas.
 
 Todos estos archivos deben colocarse en una misma carpeta pública de nuestro servidor (public_html, htdocs, etc), aunque también se pueden duplicar y colocar en sub-carpetas distintas si se desea llevar varios recuentos simultáneos supervisados bajo la misma agrupación (por ejemplo, elección de presidente, parlamentarios, concejales, etc., realizados el mismo día de votación).
 
-ARCHIVO DE CONFIGURACIÓN
+### ARCHIVO DE CONFIGURACIÓN
 
 Debemos agregar un cuarto archivo "definiciones.php" para configurar y personalizar nuestro portal WEB. Aquí podrán definir el nombre de la agrupación, opciones de votación, claves a generar, entre otros. Mas abajo trataremos esto en detalle.
 
-ARCHIVO DE IMÁGEN
+### ARCHIVO DE IMÁGEN
 
 Puedes incluir una imagen o logo que identifique a tu agrupación el cual se mostrará en tu portal. Este debe ser un archivo png de nombre "logo.png", con unos 400x400 pixeles sería suficiente para no sobrecargar el servidor.
 
 ----
 
-INSTALACIÓN
+### INSTALACIÓN
 
 Una vez puesto los 5 archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo basta con borrar estas 3 carpetas.
 
@@ -48,31 +48,31 @@ SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará au
 
 ----
 
-CONFIGURACIÓN DEL ARCHIVO "definiciones.php"
+### CONFIGURACIÓN DEL ARCHIVO "definiciones.php"
 
 Aqui se encuentran los siguientes #defines para configurar nuestras preferencias
 
-NOMBRE_COALICION: Escogemos acá el nombre de nuestra agrupación que aparecerá en el título del portal. La verdad es que se puede poner cualquier título (por ejemplo, distintos recuentos separados: presidenciales, parlamentarias, consejales, alcaldías, etc).
+`NOMBRE_COALICION`: Escogemos acá el nombre de nuestra agrupación que aparecerá en el título del portal. La verdad es que se puede poner cualquier título (por ejemplo, distintos recuentos separados: presidenciales, parlamentarias, consejales, alcaldías, etc).
 
-MESA_ULTIMA: Especificamos acá el número de la última mesa. Esta información la proporciona el servel. Según wikipedia ví aprox 46887 mesas para las ultimas elecciones.
+`MESA_ULTIMA`: Especificamos acá el número de la última mesa. Esta información la proporciona el servel. Según wikipedia ví aprox 46887 mesas para las ultimas elecciones.
 
-MESA_MAXVOTOS: Este es sólo un valor de limitación para los conteos. Ver con el servel cual es el máximo de votos permitidos para una mesa.
+`MESA_MAXVOTOS`: Este es sólo un valor de limitación para los conteos. Ver con el servel cual es el máximo de votos permitidos para una mesa.
 
-MAXIMO_MODIFICACIONES: Aquí definimos cuantos reportes permitiremos por mesas (con 2 o 3 seria suficiente).
+`MAXIMO_MODIFICACIONES`: Aquí definimos cuantos reportes permitiremos por mesas (con 2 o 3 seria suficiente).
 
-SEGUNDOS_ACTUALIZACION: Estos son los segundos (periodo) en el que se actualizará la info en el portal (donde aparece "La información se actualizará en XX segundos."). Yo recomiendo minimo 30 segundos para no saturar el servidor (recuerden que podrian haber miles de usuarios conectados solicitando actualizar la info en sus navegadores).
+`SEGUNDOS_ACTUALIZACION`: Estos son los segundos (periodo) en el que se actualizará la info en el portal (donde aparece "La información se actualizará en XX segundos."). Yo recomiendo minimo 30 segundos para no saturar el servidor (recuerden que podrian haber miles de usuarios conectados solicitando actualizar la info en sus navegadores).
 
-SEGUNDOS_RECALCULO: Estos son los segundos (periodo) en el que se efectuará el computo global en el servidor (recuento de todas las mesas). A medida que se reportan las mesas, se irán generando muchos archivos "MESA_XXXX.txt", los cuales demandarán cada vez más trabajo al servidor el recalculo. Yo recomiendo que el computo global se realice mínimo cada 1 minutos para mantener una fluidez aceptable en el portal. 
+`SEGUNDOS_RECALCULO`: Estos son los segundos (periodo) en el que se efectuará el computo global en el servidor (recuento de todas las mesas). A medida que se reportan las mesas, se irán generando muchos archivos "MESA_XXXX.txt", los cuales demandarán cada vez más trabajo al servidor el recalculo. Yo recomiendo que el computo global se realice mínimo cada 1 minutos para mantener una fluidez aceptable en el portal. 
 
-TOTAL_CLAVES: Aqui especificamos el total de claves de autorización (clave mesa) que deseamos generar. Sólo en el caso de requerir seguridad estricta, habria que generar una clave por mesa (o sea, debiera coincidir con MESA_ULTIMA). Este archivo se generará una sóla vez (si aún no se ha creado las carpeta SEGURIDAD).
+`TOTAL_CLAVES`: Aqui especificamos el total de claves de autorización (clave mesa) que deseamos generar. Sólo en el caso de requerir seguridad estricta, habria que generar una clave por mesa (o sea, debiera coincidir con MESA_ULTIMA). Este archivo se generará una sóla vez (si aún no se ha creado las carpeta SEGURIDAD).
 
-CARACTERES_CLAVE: Aqui especificamos cuántos carecteres (letras o números) tendran las claves que generaremos. Yo creo que con 4 digitos sería suficiente, no es necesario complicarse.
+`CARACTERES_CLAVE`: Aqui especificamos cuántos carecteres (letras o números) tendran las claves que generaremos. Yo creo que con 4 digitos sería suficiente, no es necesario complicarse.
 
-CLAVE_ESTRICTA: Si este valor es 0, cualquier clave de la lista servirá para cualquier mesa. Si este valor es 1, la primera clave de la lista funciona sólo para la mesa 1, la segunda clave de la lista funciona sólo para la mesa 2, y asi sucesivamente. NOTA: si borras todos los archivos de la carpeta SEGURIDAD, no será necesario especificar ninguna clave (clave mesa) en el portal (o sea, cualquier persona podría modificar el conteo global). Este último modo sería adecuado para un ensayo preliminar (para que los usuarios se familiaricen con el portal).
+`CLAVE_ESTRICTA`: Si este valor es 0, cualquier clave de la lista servirá para cualquier mesa. Si este valor es 1, la primera clave de la lista funciona sólo para la mesa 1, la segunda clave de la lista funciona sólo para la mesa 2, y asi sucesivamente. NOTA: si borras todos los archivos de la carpeta SEGURIDAD, no será necesario especificar ninguna clave (clave mesa) en el portal (o sea, cualquier persona podría modificar el conteo global). Este último modo sería adecuado para un ensayo preliminar (para que los usuarios se familiaricen con el portal).
 
 ----
 
-CONFIGURACIÓN DE LAS OPCIONES DE VOTACIÓN
+### CONFIGURACIÓN DE LAS OPCIONES DE VOTACIÓN
 
 En el mismo archivo "definiciones.php" está el arreglo `$opciones` donde podemos especificar todas las opciones de votación que deseamos. Ya vienen definidos por defecto en el archivo adjunto para el plebiscito de salida CHILE 2022, pero si quisieramos por ejemplo estructurarlo según la elección presidencial de CHILE 2021, quedaría de la siguiente forma:
 ```
