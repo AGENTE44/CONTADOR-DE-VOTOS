@@ -1,9 +1,9 @@
 # CONTADOR-DE-VOTOS
-Portal WEB libre para la recepción de recuento de votos electorales
+Portal WEB de código libre para la recepción de recuento de votos electorales
 
 <img src="https://user-images.githubusercontent.com/109446387/180042518-1bca89ad-6351-41b2-865f-d886b0f81614.jpg" height="280">
 
-A raíz de los cuestionables resultados de las últimas votaciones electorales en CHILE, con estadísticas y cifras fuera de norma, candidatos desconocidos electos y otros reelectos con historial cuestionable, he creado este contador de votos que permite a cualquier agrupación de personas, ya sea partido político, coalición, institución, etc., poder implementar libre y fácilmente su propio portal WEB de recepción de votos independiente, permitiendoles llevar un conteo paralelo al utilizado por los organismos oficiales del gobierno (en este caso el SERVEL). Cualquier persona puede participar del recuento de votos, solo necesita de un smartphone con conexión a internet durante el escrutinio, el cual a través del navegador reportará los resultados de su mesa al portal y acceder al recuento global en tiempo real, antes de los publicados por el organismo oficial. 
+A raíz de los cuestionables resultados de las últimas votaciones electorales en CHILE, con estadísticas y cifras fuera de norma, candidatos desconocidos electos y otros reelectos con historial cuestionable, he creado este contador de votos que permite a cualquier agrupación de personas, ya sea partido político, coalición, institución, etc., poder implementar libre y fácilmente su propio portal WEB de recepción de votos independiente, permitiendoles llevar un conteo paralelo al utilizado por los organismos oficiales del gobierno (en este caso el SERVEL). Cualquier persona puede participar del recuento de votos, solo necesita de un smartphone con conexión a internet durante el escrutinio, el cual a través del navegador podrá reportar los resultados de su mesa al portal y acceder al recuento global en tiempo real, antes de los publicados por el organismo oficial. 
 
 <img src="https://user-images.githubusercontent.com/109446387/180041986-a4db381a-8e47-4fcd-b4e0-0adbe9c4e855.png" height="280">
 
@@ -13,23 +13,23 @@ Al contrario de lo que se piensa sobre este tipo de herramientas, no se necesita
 
 ----
 
-Archivos involucrados
+ARCHIVOS INVOLUCRADOS
 
 Las funciones necesarias para el portal se reducen a 3 archivos de código abierto PHP publicados acá: "index.php", "funciones.php" y "evento.php". Al ser un programa muy breve, resultará fácil para cualquier programador revisarlo y verificar la presencia de errores o potenciales trampas.
 
 Todos estos archivos deben colocarse en una misma carpeta pública de nuestro servidor (public_html, htdocs, etc), aunque también se pueden duplicar y colocar en sub-carpetas distintas si se desea llevar varios recuentos simultáneos supervisados bajo la misma agrupación (por ejemplo, elección de presidente, parlamentarios, concejales, etc., realizados el mismo día de votación).
 
-Archivo de configuración
+ARCHIVO DE CONFIGURACIÓN
 
 Debemos agregar un cuarto archivo "definiciones.php" para configurar y personalizar nuestro portal WEB. Aquí podrán definir el nombre de la agrupación, opciones de votación, claves a generar, entre otros. Mas abajo trataremos esto en detalle.
 
-Archivo de imágen
+ARCHIVO DE IMÁGEN
 
 Puedes incluir una imagen o logo que identifique a tu agrupación el cual se mostrará en tu portal. Este debe ser un archivo png de nombre "logo.png", con unos 400x400 pixeles sería suficiente para no sobrecargar el servidor.
 
 ----
 
-Instalación
+INSTALACIÓN
 
 Una vez puesto los 5 archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo basta con borrar estas 3 carpetas.
 
@@ -47,7 +47,7 @@ SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará au
 
 ----
 
-Configuración del archivo "definiciones.php"
+CONFIGURACIÓN DEL ARCHIVO "definiciones.php"
 
 Aqui se encuentran los siguientes #defines para configurar nuestras preferencias
 
