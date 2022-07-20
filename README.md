@@ -1,5 +1,5 @@
 # CONTADOR-DE-VOTOS
-Portal WEB de código libre para la recepción de recuento de votos electorales
+Portal WEB de código abierto para la recepción de recuento de votos electorales
 
 <img src="https://user-images.githubusercontent.com/109446387/180042518-1bca89ad-6351-41b2-865f-d886b0f81614.jpg" height="280">
 
