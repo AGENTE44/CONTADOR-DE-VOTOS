@@ -27,11 +27,11 @@ Puedes incluir una imagen o logo que identifique a tu agrupación, el cual se mo
 
 Instalación
 
-Una vez puesto los archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo bastaria con borrar estas 3 carpetas.
+Una vez puesto los 5 archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo bastaria con borrar estas 3 carpetas.
 
-MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa debe identificarse con un número único y correlativo.
+MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa de votación debe identificarse con un número único y correlativo.
 
-RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado del recuento global (sumatoria de todas las mesas). Este proceso de recuento de muchos archivos "MESA_XXXX.txt" consume tiempo y debe minimizarse utilizando este archivo de respaldo que será consultado frecuentemente por todos los usuarios conectados. Entre las miles de consultas de usuarios, solo una de ellas gatillará el recuento global que será guardado aquí, de forma periódica según el tiempo especificado en "definiciones.php".
+RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado del recuento global (sumatoria de todas las mesas). Este proceso de recuento de muchos archivos "MESA_XXXX.txt" consume tiempo y podria saturar el servidor, por lo tanto esto lo agilizamos utilizando un archivo de respaldo del recuento global que será consultado frecuentemente por todos los usuarios conectados (lectura en tiempo real). Entre las miles de consultas de usuarios, solo una de ellas gatillará el recuento global para actualizar el cómputo en este archivo, de forma periódica según el tiempo especificado en "definiciones.php".
 
 SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará automáticamente un archivo con todas las claves que se especificaron en "definiciones.php" y que permitirá autentificar a los usuarios. En este archivo se pondrá 1 clave por linea y solo el supervisor o el administrador del servidor podrá acceder a ella (se generará con nombre aleatorio para evitar accesos externos indebidos). Hay 2 niveles de seguridad que se pueden implementar con estas claves según lo defina el grupo, lo cual explicaremos más abajo.
 
