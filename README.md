@@ -33,7 +33,9 @@ Instalación
 
 Una vez puesto los 5 archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo basta con borrar estas 3 carpetas.
 
-MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa de votación debe identificarse con un número único y correlativo.
+MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa de votación debe identificarse con un número único y correlativo. A continuación se muestra el contenido de este archivo, en este ejemplo se muestran 3 lineas que corresponden a 3 modificaciones del conteo (configurable). En cada línea esta la información corespondiente a cada recuento. El recuento global utilizará la última linea (última modificación) para el cálculo final. 
+
+<img src="https://user-images.githubusercontent.com/109446387/180044380-2c9ec920-9c17-425b-8aa1-6f186aec0fe0.png" height="140">
 
 RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado del recuento global (sumatoria de todas las mesas). Este proceso de recuento de muchos archivos "MESA_XXXX.txt" consume tiempo y podria saturar el servidor, por lo tanto esto lo agilizamos utilizando un archivo de respaldo del recuento global que será consultado frecuentemente por todos los usuarios conectados (lectura en tiempo real). Entre las miles de consultas de usuarios, solo una de ellas gatillará el recuento global para actualizar el cómputo en este archivo, de forma periódica según el tiempo especificado en "definiciones.php".
 
