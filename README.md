@@ -41,7 +41,7 @@ RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado d
 
 <img src="https://user-images.githubusercontent.com/109446387/180046171-c6ef2398-1288-459b-9450-3af64ba31fc0.png" height="100">
 
-SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará automáticamente un archivo con todas las claves que se especificaron en "definiciones.php" y que permitirá autentificar a los usuarios. En este archivo se pondrá 1 clave por linea y solo el supervisor o el administrador del servidor podrá acceder a ella (se generará con nombre aleatorio para evitar accesos externos indebidos). Hay 2 niveles de seguridad que se pueden implementar con estas claves según lo defina el grupo, lo cual explicaremos más abajo.
+SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará automáticamente un archivo con todas las claves que se especificaron en "definiciones.php" y que permitirá autentificar a los usuarios. En este archivo se pondrá 1 clave por linea y solo el supervisor o el administrador del servidor podrá acceder a ella para su eventual distribución (se generará con nombre aleatorio para evitar accesos externos indebidos). Hay 3 niveles de seguridad que se pueden implementar con estas claves según lo defina el grupo, lo cual explicaremos más abajo. En el siguiente ejemplo se muestra una lista con claves aleatorias de 10 dígitos. Nótese también la aleatoriedad del nombre del archivo.
 
 <img src="https://user-images.githubusercontent.com/109446387/180046713-6aa3b1c3-9f6c-4501-a665-1283fe14433e.png" height="100">
 
