@@ -74,7 +74,7 @@ CLAVE_ESTRICTA: Si este valor es 0, cualquier clave de la lista servirá para cu
 
 CONFIGURACIÓN DE LAS OPCIONES DE VOTACIÓN
 
-En el mismo archivo "definiciones.php" está el arreglo $opciones donde podemos especificar todas las opciones de votación que deseamos. Ya vienen definidos por defecto en el archivo adjunto para el plebiscito de salida CHILE 2022, pero si quisieramos por ejemplo estructurarlo según las primarias presidenciales de CHILE 2021 quedaría de la siguiente forma:
+En el mismo archivo "definiciones.php" está el arreglo `$opciones` donde podemos especificar todas las opciones de votación que deseamos. Ya vienen definidos por defecto en el archivo adjunto para el plebiscito de salida CHILE 2022, pero si quisieramos por ejemplo estructurarlo según la elección presidencial de CHILE 2021, quedaría de la siguiente forma:
 ```
 $opciones = array(
   array("candidato1", "Gabriel Boric", 0),
