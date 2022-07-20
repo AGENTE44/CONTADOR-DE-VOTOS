@@ -49,9 +49,9 @@ SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará au
 
 Configuración del archivo "definiciones.php"
 
-Aqui se encuentran los siguientes #defines para configurar según nuestras preferncias
+Aqui se encuentran los siguientes #defines para configurar nuestras preferencias
 
-NOMBRE_COALICION: Escogemos acá el nombre de nuestra agrupación que aparecerá en el título del portal.
+NOMBRE_COALICION: Escogemos acá el nombre de nuestra agrupación que aparecerá en el título del portal. La verdad es que se puede poner cualquier título (por ejemplo, distintos recuentos separados: presidenciales, parlamentarias, consejales, alcaldías, etc).
 
 MESA_ULTIMA: Especificamos acá el número de la última mesa. Esta información la proporciona el servel. Según wikipedia ví aprox 46887 mesas para las ultimas elecciones.
 
