@@ -33,16 +33,17 @@ Instalación
 
 Una vez puesto los 5 archivos en una carpeta pública del servidor y haber definido los parámetros en el archivo "definiciones.php", desde un navegador cualquiera accedemos al portal por primera vez para que se generen 3 carpetas de trabajo: MESAS, RESULTADOS y SEGURIDAD. Para reiniciar el conteo, solo basta con borrar estas 3 carpetas.
 
-MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa de votación debe identificarse con un número único y correlativo. A continuación se muestra el contenido de este archivo, en este ejemplo se muestran 3 lineas que corresponden a 3 modificaciones del conteo (configurable). En cada línea esta la información corespondiente a cada recuento. El recuento global utilizará la última linea (última modificación) para el cálculo final. 
+MESAS: aquí se guardarán los reportes de cada mesa en archivos de texto separados: "MESA_1.txt", "MESA_2.txt", "MESA_3.txt", etc. Se asume que cada mesa de votación debe identificarse con un número único y correlativo. A continuación se muestra el contenido de uno de estos archivos. En este ejemplo se muestran 3 líneas que corresponden a 3 modificaciones del conteo (configurable). En cada línea esta la información corespondiente a cada recuento. El recuento global utilizará la última línea (última modificación) para el cómputo final. 
 
-<img src="https://user-images.githubusercontent.com/109446387/180044380-2c9ec920-9c17-425b-8aa1-6f186aec0fe0.png" height="140">
+<img src="https://user-images.githubusercontent.com/109446387/180044380-2c9ec920-9c17-425b-8aa1-6f186aec0fe0.png" height="100">
 
-RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado del recuento global (sumatoria de todas las mesas). Este proceso de recuento de muchos archivos "MESA_XXXX.txt" consume tiempo y podria saturar el servidor, por lo tanto esto lo agilizamos utilizando un archivo de respaldo del recuento global que será consultado frecuentemente por todos los usuarios conectados (lectura en tiempo real). Entre las miles de consultas de usuarios, solo una de ellas gatillará el recuento global para actualizar el cómputo en este archivo, de forma periódica según el tiempo especificado en "definiciones.php".
+RESULTADOS: aquí dentro se guardará un archivo "CONTEO.txt" con el resultado del recuento global (sumatoria de todas las mesas). Este proceso de recuento de muchos archivos "MESA_XXXX.txt" consume tiempo y podria saturar el servidor, por lo tanto esto lo agilizamos utilizando un archivo de respaldo del recuento global que será consultado frecuentemente por todos los usuarios conectados (lectura en tiempo real). Entre las miles de consultas de usuarios, solo una de ellas gatillará el recuento global para actualizar el cómputo en este archivo, de forma periódica según el tiempo especificado en "definiciones.php". A continuación se muestra el contenido de este archivo. Esta información corresponde al recuento global y debiera actualizarse mínimo cada 1 minuto (configurable) para no saturar el servidor.
+
+<img src="https://user-images.githubusercontent.com/109446387/180046171-c6ef2398-1288-459b-9450-3af64ba31fc0.png" height="100">
 
 SEGURIDAD: esta última carpeta es muy importante, puesto que acá se creará automáticamente un archivo con todas las claves que se especificaron en "definiciones.php" y que permitirá autentificar a los usuarios. En este archivo se pondrá 1 clave por linea y solo el supervisor o el administrador del servidor podrá acceder a ella (se generará con nombre aleatorio para evitar accesos externos indebidos). Hay 2 niveles de seguridad que se pueden implementar con estas claves según lo defina el grupo, lo cual explicaremos más abajo.
 
-
-
+<img src="https://user-images.githubusercontent.com/109446387/180046713-6aa3b1c3-9f6c-4501-a665-1283fe14433e.png" height="100">
 
 
 
