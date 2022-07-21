@@ -93,5 +93,7 @@ El segundo campo corresponde a la etiqueta pública que se mostrará en el porta
 
 El tercer campo se reserva para la variable que se usará internamente en el cálculo final. Debe estar siempre limpia (o sea, cero).
 
-Pueden jugar con este contador en el siguiente [link](http://www.contador.x10.mx). Recomiendo corroborar su funcionamiento desde varios smartphones.
+----
+
+### Pueden jugar con este contador en el siguiente [link](http://www.contador.x10.mx). Recomiendo corroborar su funcionamiento desde varios smartphones.
 
