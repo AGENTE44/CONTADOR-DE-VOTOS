@@ -91,7 +91,7 @@ El primer campo corresponde al nombre de la variable interna, el cual debería s
 
 El segundo campo corresponde a la etiqueta pública que se mostrará en el portal. Pueden utilizarse caracteres propios de los nombres.
 
-El tercer campo se reserva para la variable que se usará internamente en el cálculo final. Debe estar siempre limpia (o sea, cero).
+El tercer campo se reserva para la variable que se usará internamente en el cálculo final. Debe estar siempre limpio (o sea, cero).
 
 ----
 
