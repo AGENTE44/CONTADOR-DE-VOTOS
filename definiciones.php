@@ -8,7 +8,7 @@
 // para reiniciar el contador, configura primero este archivo con los valores deseados y luego borra las carpetas MESAS, RESULTADOS, SEGURIDAD (si es que ya estaban creadas)
 // en la carpeta de seguridad se generará automáticamente un archivo con la lista de claves deseadas
 
-define("NOMBRE_COALICION"  , "PARTIDO<br>REPUBLICANO<br>");  // escoge el nombre de tu partido/coalicion (el <br> es solo un ENTER para mostrar 2 lineas), esto se mostrará en tu portal
+define("NOMBRE_COALICION"  , "PARTIDO<br>REPUBLICANO");  // escoge el nombre de tu partido/coalicion (el <br> es solo un ENTER para mostrar 2 lineas), esto se mostrará en tu portal
 
 define("MESA_ULTIMA", 46887);         // aqui puede variar segun la ocacion, esta info debiera proporcionarla el SERVEL (creo que son aprox 46887, de todas formas deben confirmarlo)
 define("MESA_MAXVOTOS", 1000);        // maxima cantidad de votos para una mesa, esto se utiliza para proteger un poco (aqui tambien depende de la info del SERVEL)
