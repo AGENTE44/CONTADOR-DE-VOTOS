@@ -95,5 +95,5 @@ El tercer campo se reserva para la variable que se usará internamente en el cá
 
 ----
 
-### Pueden jugar con este contador en el siguiente [link](http://www.contador.x10.mx). Recomiendo corroborar su funcionamiento desde varios smartphones.
+### Pueden jugar con este contador en el siguiente [link](http://www.contador.x10.mx). Recomiendo corroborar su funcionamiento desde varios smartphones. No es necesario usar clave en este ensayo preliminar.
 
