@@ -124,6 +124,7 @@ const EVENT_RESOURCE = 'evento.php';
 const SEGUNDOS_ACTUALIZACION = <?php echo SEGUNDOS_ACTUALIZACION;?>;
 let detalle_conexion = '';
 let mesa = '';
+let flag_enviando = 0;
 
 // ---------------------------------------------------------------------------------------
 
@@ -226,11 +227,11 @@ function actualizar_resultados(mssg){
 // ---------------------------------------------------------------------------------------
 
 function procesar_respuesta(mssg){
-  if(mssg == 'ERROR_COM'){detalle_conexion = HTML_string_color('red', 'Hay problemas con la comunicación. Verifica tu conexión.');return;}
-  if(mssg == 'ERROR_RESP'){detalle_conexion = HTML_string_color('red', 'El servidor no responde. Reintentando en breve.');return;}
+  if(mssg == 'ERROR_COM'){var ed='Hay problemas con la comunicación. Verifica tu conexión.';detalle_conexion = HTML_string_color('red', ed);if(flag_enviando){flag_enviando=0;window.alert(ed);}return;}
+  if(mssg == 'ERROR_RESP'){var ed='El servidor no responde. Reintentando en breve.';detalle_conexion = HTML_string_color('red', ed);if(flag_enviando){flag_enviando=0;window.alert(ed);}return;}
   var recpcionado = getKeyValue(mssg, 'RECEPCIONADO');if(recpcionado!=''){agregar_reporte_enviado(recpcionado + '<br><br>');}
   var resultados = getKeyValue(mssg, 'RESULTADOS');if(resultados=='DISPONIBLE'){actualizar_resultados(mssg);}
-  var alerta = getKeyValue(mssg, 'ALERTA');if(alerta!=''){window.alert(alerta);}
+  var alerta = getKeyValue(mssg, 'ALERTA');if(alerta!=''){flag_enviando=0;window.alert(alerta);}
 }
 
 // ---------------------------------------------------------------------------------------
@@ -266,7 +267,7 @@ function BOTON_mouseup(event){
       params += STRING_keyvalue(elements[i].id, elements[i].value);
     }
   }
-  salvar_campos();send2server(EVENT_RESOURCE, params, procesar_respuesta);
+  salvar_campos();send2server(EVENT_RESOURCE, params, procesar_respuesta);flag_enviando=1;
 }
 
 // ---------------------------------------------------------------------------------------
